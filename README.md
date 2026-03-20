@@ -72,7 +72,7 @@
 
 ```bash
 # Клонируем репозиторий
-git clone https://github.com/yourusername/github-symphony.git
+git clone https://github.com/Increasse/github-symphony.git
 cd github-symphony
 
 # Устанавливаем зависимости
