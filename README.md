@@ -1,73 +1,82 @@
-# React + TypeScript + Vite
+# GitHub Symphony
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Превращаем историю коммитов в музыку и визуализацию
 
-Currently, two official plugins are available:
+[![React](https://img.shields.io/badge/React-18-blue)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.0-purple)](https://vitejs.dev/)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## О проекте
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**GitHub Symphony** — это интерактивное веб-приложение, которое анализирует историю коммитов GitHub-репозитория и преобразует её в музыкально-визуальную симфонию.
 
-## Expanding the ESLint configuration
+Каждый день разработки становится нотой:
+- **Высота ноты** = количество коммитов
+- **Цвет ноты** = доминирующий язык программирования
+- **Длительность** = время до следующего коммита
+- **Тембр** = активность дня (от мягкого синуса до резкой пилы)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Возможности
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Визуализация партитуры
+- Нотный стан с 5 линиями и скрипичным ключом
+- Цветовое кодирование языков программирования
+- Интерактивность: наведение показывает тултип, клик открывает детали
+- Автоматическое масштабирование под любое количество данных
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Аудио-синтез
+- Web Audio API для генерации звука на лету
+- Регулировка громкости
+- **Регулировка скорости** (0.3x – 3.0x) — от замедленной атмосферы до энергичного темпа
+- Разные типы волны: синус (мягкий), квадрат (средний), пила (резкий)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Тепловая карта активности
+- Анализ времени суток коммитов
+- Визуализация "сов" vs "жаворонков"
+- Интенсивность цвета отражает активность
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Статистика
+- Общее количество коммитов
+- Количество дней с коммитами
+- Период анализа
+- Топ языков программирования
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 🛠 Технологии
+
+| Категория | Технологии |
+|-----------|------------|
+| **Frontend** | React 18, TypeScript, Vite |
+| **State Management** | Zustand, React Query |
+| **API** | GitHub GraphQL API, Octokit |
+| **Анимация** | Canvas API |
+| **Аудио** | Web Audio API |
+| **Стили** | TailwindCSS |
+
+---
+
+## Быстрый старт
+
+### Требования
+- Node.js 18+
+- npm или yarn
+- GitHub Personal Access Token
+
+### Установка
+
+```bash
+# Клонируем репозиторий
+git clone https://github.com/yourusername/github-symphony.git
+cd github-symphony
+
+# Устанавливаем зависимости
+npm install
+
+# Запускаем в режиме разработки
+npm run dev
