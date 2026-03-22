@@ -75,7 +75,7 @@ function App() {
         stopSymphony();
     };
 
-    const handleNoteClick = (note: any, index: number) => {
+    const handleNoteClick = (note: any) => {
         setSelectedNote(note);
         if (!isPlaying && isAudioEnabled) {
             playNote(note);

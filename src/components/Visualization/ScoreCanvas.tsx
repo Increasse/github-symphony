@@ -20,8 +20,6 @@ const ScoreCanvas: React.FC<ScoreCanvasProps> = ({
 
     const padding = { top: 60, right: 40, bottom: 60, left: 80 };
     const drawingWidth = width - padding.left - padding.right;
-    const drawingHeight = height - padding.top - padding.bottom;
-
     const maxCommitsPerDay = Math.max(...notes.map(n => n.commitCount), 1);
 
     const staffTop = padding.top + 20;
@@ -171,7 +169,7 @@ const ScoreCanvas: React.FC<ScoreCanvasProps> = ({
         ctx.font = 'bold 11px monospace';
         ctx.fillText('Языки:', legendX, legendY);
 
-        topLanguages.forEach(([lang, data], idx) => {
+        topLanguages.forEach(([lang, data]) => {
             legendY += 18;
 
             ctx.fillStyle = data.color;
